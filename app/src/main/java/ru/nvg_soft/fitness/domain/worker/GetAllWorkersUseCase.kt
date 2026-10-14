@@ -1,8 +1,9 @@
 package ru.nvg_soft.fitness.domain.worker
 
 import kotlinx.coroutines.flow.Flow
+import javax.inject.Inject
 
-class GetAllWorkersUseCase (
+class GetAllWorkersUseCase @Inject constructor(
     private val repository: WorkerRepository
 ) {
     operator fun invoke(): Flow<List<Worker>>{

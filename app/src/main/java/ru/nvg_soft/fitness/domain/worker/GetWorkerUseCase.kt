@@ -1,6 +1,8 @@
 package ru.nvg_soft.fitness.domain.worker
 
-class GetWorkerUseCase (
+import javax.inject.Inject
+
+class GetWorkerUseCase @Inject constructor(
     private val repository: WorkerRepository
 ) {
     suspend operator fun invoke(workerId: Long): Worker{

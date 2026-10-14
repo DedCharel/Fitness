@@ -1,6 +1,8 @@
 package ru.nvg_soft.fitness.domain.worker
 
-class EditWorkerUseCase (
+import javax.inject.Inject
+
+class EditWorkerUseCase @Inject constructor(
     private val repository: WorkerRepository
 ) {
     suspend operator fun invoke(worker: Worker){
