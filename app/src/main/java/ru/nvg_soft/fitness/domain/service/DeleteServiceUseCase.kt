@@ -1,0 +1,11 @@
+package ru.nvg_soft.fitness.domain.service
+
+import javax.inject.Inject
+
+class DeleteServiceUseCase @Inject constructor(
+    private val repository: ServiceRepository
+) {
+    suspend operator fun invoke(serviceId: Long) {
+        repository.deleteService(serviceId)
+    }
+}
